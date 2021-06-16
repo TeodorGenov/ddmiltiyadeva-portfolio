@@ -1,5 +1,5 @@
-import anime from "animejs/lib/anime.es.js";
-
+import anime from "https://unpkg.com/animejs@3.2.1/lib/anime.es.js";
+// var anime = require("animejs/lib/anime.es.js");
 var textWrapper = document.querySelector(".portfolio");
 textWrapper.innerHTML = textWrapper.textContent.replace(
 	/\S/g,

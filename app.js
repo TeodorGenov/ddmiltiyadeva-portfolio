@@ -1,7 +1,8 @@
-var express = require("express");
-var app = express();
-var path = require("path");
+import express from "express";
+import path from "path";
 
+var app = express();
+var __dirname = path.resolve(path.dirname(""));
 app.use(express.static("src"));
 
 app.get("/", function (req, res) {
