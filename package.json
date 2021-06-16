@@ -5,8 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "parcel index.html",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "postcss src/css/styles.css -o src/css/styles.css"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
 	"author": "",
