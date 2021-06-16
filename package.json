@@ -1,0 +1,30 @@
+{
+	"name": "daniela-portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "parcel src/index.html",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "postcss src/css/styles.css -o src/css/styles.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^9.8.6",
+		"eslint": "^7.27.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.23.4",
+		"parcel-bundler": "^1.12.5",
+		"postcss": "^7.0.35",
+		"prettier": "^2.3.0",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
+	},
+	"dependencies": {
+		"animejs": "^3.2.1",
+		"fancybox": "^3.0.1",
+		"jquery": "^3.6.0",
+		"micromodal": "^0.4.6"
+	}
+}
