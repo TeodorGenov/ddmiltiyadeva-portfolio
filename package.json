@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "parcel index.html",
+		"build": "parcel build index.html",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node app.js"
 	},
@@ -17,7 +18,7 @@
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-import": "^2.23.4",
 		"parcel-bundler": "^1.12.5",
-		"postcss": "^7.0.35",
+		"postcss": "^8.1.10",
 		"prettier": "^2.3.0",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
 	},
@@ -26,6 +27,7 @@
 		"express": "^4.17.1",
 		"fancybox": "^3.0.1",
 		"jquery": "^3.6.0",
-		"micromodal": "^0.4.6"
+		"micromodal": "^0.4.6",
+		"postcss": "^7"
 	}
 }
