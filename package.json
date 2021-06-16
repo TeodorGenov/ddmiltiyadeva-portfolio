@@ -8,7 +8,7 @@
 		"dev": "parcel index.html",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node app.js",
-		"build": "npx tailwindcss build src/css/styles.css -o src/css/output.css"
+		"build-css": "npx tailwindcss build src/css/styles.css -o src/css/output.css"
 	},
 	"keywords": [],
 	"author": "",
