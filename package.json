@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "parcel index.html",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node app.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -22,6 +23,7 @@
 	},
 	"dependencies": {
 		"animejs": "^3.2.1",
+		"express": "^4.17.1",
 		"fancybox": "^3.0.1",
 		"jquery": "^3.6.0",
 		"micromodal": "^0.4.6"
