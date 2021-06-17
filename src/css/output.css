@@ -31846,6 +31846,18 @@ video {
   src: url(./socialico/Socialico.woff);
 }
 
+@font-face {
+  font-family: Montserrat;
+
+  src: url(./montserrat/Montserrat-Regular.woff);
+}
+
+@font-face {
+  font-family: Elowen;
+
+  src: url(./elowen//Elowen.woff);
+}
+
 .socialico-plus {
   font-family: SocialicoPlus;
   color: white;
@@ -31875,7 +31887,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: Montserrat;
 }
 
 a {
@@ -31916,7 +31928,7 @@ a {
 }
 
 .logo {
-  font-family: "Elowen";
+  font-family: Elowen;
   text-align: center;
   justify-content: end;
   font-size: 40rem;
