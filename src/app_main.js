@@ -35,6 +35,7 @@ anime.timeline({ loop: false }).add({
 	targets: ".portfolio .letter",
 	translateX: [40, 0],
 	translateZ: 0,
+	pointerEvent: "auto",
 	opacity: [0, 1],
 	easing: "easeOutExpo",
 	duration: 2000,
@@ -59,6 +60,8 @@ function hide() {
 		delay: 800,
 	});
 }
+
+console.log("Graph nav", document.getElementsByClassName(".el"));
 graphicDesignButton.addEventListener("click", () => {
 	if (!clicked) {
 		anime({
@@ -72,9 +75,11 @@ graphicDesignButton.addEventListener("click", () => {
 			delay: anime.stagger(100, { start: 100 }),
 		});
 		clicked = true;
-		var timeout = setTimeout(() => {
-			hide();
-		}, 3000);
+		if (clicked) {
+			var timeout = setTimeout(() => {
+				hide();
+			}, 3000);
+		}
 	} else {
 		hide();
 	}

@@ -31918,9 +31918,10 @@ a {
   font-weight: 500;
 }
 
+/* 
 .graphic-design .el {
-  pointer-events: none;
-}
+	pointer-events: none;
+} */
 
 .sticky-nav-bar {
   position: fixed;
@@ -32144,7 +32145,7 @@ button {
   font-size: 3em;
   display: flex;
   align-items: center;
-  margin-right: 10.74em;
+  margin-right: 10.68em;
   transition: margin-right 500ms;
 }
 
@@ -32152,7 +32153,7 @@ button {
   font-size: 3em;
   display: flex;
   align-items: center;
-  margin-right: 9.5em;
+  margin-right: 11.03em;
   transition: margin-right 500ms;
 }
 
