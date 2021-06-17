@@ -28,9 +28,18 @@ const brandNav = document.getElementById("brand-nav");
 brandNav.addEventListener("click", () => {
 	document.getElementById("brand").scrollIntoView({ behavior: "smooth" });
 });
-// const illNav = document.getElementById("");
-// const otherNav = document.getElementById("");
+const illNav = document.getElementById("ill-nav");
+illNav.addEventListener("click", () => {
+	document
+		.getElementById("illustrations")
+		.scrollIntoView({ behavior: "smooth" });
+});
+const otherNav = document.getElementById("other-nav");
+otherNav.addEventListener("click", () => {
+	document.getElementById("other").scrollIntoView({ behavior: "smooth" });
+});
 
+console.log(document.getElementsByClassName("no-pointer"));
 anime.timeline({ loop: false }).add({
 	targets: ".portfolio .letter",
 	translateX: [40, 0],
@@ -61,9 +70,25 @@ function hide() {
 	});
 }
 
-console.log("Graph nav", document.getElementsByClassName(".el"));
+for (
+	var i = 0;
+	i <= document.getElementsByClassName("no-pointer").length - 1;
+	i++
+) {
+	console.log(document.getElementsByClassName("el")[i]);
+}
+
 graphicDesignButton.addEventListener("click", () => {
 	if (!clicked) {
+		// for (
+		// 	var i = 0;
+		// 	i <= document.getElementsByClassName("no-pointer").length - 1;
+		// 	i++
+		// ) {
+		// 	console.log(document.getElementsByClassName("el")[i]);
+		// 	document.getElementsByClassName("el")[i].classList.remove("no-pointer");
+		// }
+
 		anime({
 			targets: ".nav-bar",
 			height: "300px",
@@ -75,12 +100,14 @@ graphicDesignButton.addEventListener("click", () => {
 			delay: anime.stagger(100, { start: 100 }),
 		});
 		clicked = true;
-		if (clicked) {
-			var timeout = setTimeout(() => {
-				hide();
-			}, 3000);
-		}
 	} else {
+		for (
+			var i = 0;
+			i <= document.getElementsByClassName("no-pointer").length - 1;
+			i++
+		) {
+			document.getElementsByClassName("el")[i].classList.add("no-pointer");
+		}
 		hide();
 	}
 });
@@ -127,17 +154,24 @@ const logoTitleDiv = document.querySelector(".logo-title");
 horizontalDivLogo.onwheel = (event) => {
 	var scrollAmount = 0;
 	event.preventDefault();
+
+	console.log(horizontalDivLogo.scrollLeft);
 	// horizontalDiv.scrollLeft += event.deltaY;
 	var slideTimer = setInterval(function () {
 		horizontalDivLogo.scrollLeft += event.deltaY / 10;
 		scrollAmount += 10;
 		if (horizontalDivLogo.scrollLeft === 0) {
 			logoTitleDiv.classList.remove("logo-slide");
+		} else {
+			if (!logoTitleDiv.classList.contains("logo-slide")) {
+				logoTitleDiv.classList.add("logo-slide");
+			}
 		}
 		if (scrollAmount >= 100) {
 			window.clearInterval(slideTimer);
 		}
 	}, 25);
+
 	const deltaWidth =
 		horizontalDivLogo.scrollWidth - horizontalDivLogo.scrollLeft;
 };
@@ -156,6 +190,10 @@ horizontalDivBrand.onwheel = (event) => {
 		scrollAmount += 10;
 		if (horizontalDivBrand.scrollLeft === 0) {
 			brandTitleDiv.classList.remove("brand-slide");
+		} else {
+			if (!brandTitleDiv.classList.contains("brand-slide")) {
+				brandTitleDiv.classList.add("brand-slide");
+			}
 		}
 		if (scrollAmount >= 100) {
 			window.clearInterval(slideTimer);
@@ -192,23 +230,73 @@ horizontalDivIllu.onwheel = (event) => {
 		horizontalDivIllu.scrollWidth - horizontalDivIllu.scrollLeft;
 };
 
+const horizontalDivOther = document.querySelector(".horizontal-scroll-other");
+const otherTitleDiv = document.querySelector(".other-title");
+
+horizontalDivOther.onwheel = (event) => {
+	var scrollAmount = 0;
+	event.preventDefault();
+	console.log(horizontalDivOther.scrollLeft);
+	// horizontalDiv.scrollLeft += event.deltaY;
+	var slideTimer = setInterval(function () {
+		horizontalDivOther.scrollLeft += event.deltaY / 10;
+		scrollAmount += 10;
+		if (horizontalDivOther.scrollLeft === 0) {
+			otherTitleDiv.classList.remove("illustrations-slide");
+		} else {
+			if (!otherTitleDiv.classList.contains("illustrations-slide")) {
+				otherTitleDiv.classList.add("illustrations-slide");
+			}
+		}
+		if (scrollAmount >= 100) {
+			window.clearInterval(slideTimer);
+		}
+	}, 25);
+	const deltaWidth =
+		horizontalDivOther.scrollWidth - horizontalDivOther.scrollLeft;
+};
+
 const body = document.getElementsByTagName("BODY")[0];
 
 body.addEventListener(
 	"scroll",
 	() => {
-		console.log(illustrationTitleDiv.getBoundingClientRect().y);
+		console.log(logoTitleDiv.getBoundingClientRect().y);
 
 		if (
 			photographyTitleDiv.getBoundingClientRect().y < -700 ||
 			photographyTitleDiv.getBoundingClientRect().y > 700
 		) {
+			console.log("working-photo");
 			photographyTitleDiv.classList.remove("photography-slide");
-		} else if (
-			illustrationTitleDiv.getBoundingClientRect().y < -700 ||
-			illustrationTitleDiv.getBoundingClientRect().y > 450
-		) {
-			illustrationTitleDiv.classList.remove("illustrations-slide");
+			if (
+				logoTitleDiv.getBoundingClientRect().y < -450 ||
+				logoTitleDiv.getBoundingClientRect().y > 450
+			) {
+				console.log("working-logo");
+				logoTitleDiv.classList.remove("logo-slide");
+				if (
+					brandTitleDiv.getBoundingClientRect().y < -450 ||
+					brandTitleDiv.getBoundingClientRect().y > 450
+				) {
+					console.log("working-slide");
+					brandTitleDiv.classList.remove("brand-slide");
+					if (
+						illustrationTitleDiv.getBoundingClientRect().y < -450 ||
+						illustrationTitleDiv.getBoundingClientRect().y > 450
+					) {
+						console.log("working-illu");
+						illustrationTitleDiv.classList.remove("illustrations-slide");
+						if (
+							otherTitleDiv.getBoundingClientRect().y < -450 ||
+							otherTitleDiv.getBoundingClientRect().y > 450
+						) {
+							console.log("working-illu");
+							otherTitleDiv.classList.remove("illustrations-slide");
+						}
+					}
+				}
+			}
 		}
 
 		photographyTitleDiv.onwheel = (event) => {
@@ -220,13 +308,40 @@ body.addEventListener(
 			}
 		};
 
-		illustrationTitleDiv.onwheel = (event) => {
+		logoTitleDiv.onwheel = (event) => {
 			console.log(event.deltaY);
+			if (event.deltaY > 0) {
+				if (!logoTitleDiv.classList.contains("logo-slide")) {
+					event.preventDefault();
+				}
+				logoTitleDiv.classList.add("logo-slide");
+			}
+		};
+
+		brandTitleDiv.onwheel = (event) => {
+			if (event.deltaY > 0) {
+				if (!brandTitleDiv.classList.contains("brand-slide")) {
+					event.preventDefault();
+				}
+				brandTitleDiv.classList.add("brand-slide");
+			}
+		};
+
+		illustrationTitleDiv.onwheel = (event) => {
 			if (event.deltaY > 0) {
 				if (!illustrationTitleDiv.classList.contains("illustrations-slide")) {
 					event.preventDefault();
 				}
 				illustrationTitleDiv.classList.add("illustrations-slide");
+			}
+		};
+
+		otherTitleDiv.onwheel = (event) => {
+			if (event.deltaY > 0) {
+				if (!otherTitleDiv.classList.contains("illustrations-slide")) {
+					event.preventDefault();
+				}
+				otherTitleDiv.classList.add("illustrations-slide");
 			}
 		};
 

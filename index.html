@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Daniela's Portfolio</title>
-		<link rel="stylesheet" href="/css/styles.css" type="text/css" />
+		<!-- <link rel="stylesheet" href="/css/styles.css" type="text/css" /> -->
 		<link rel="stylesheet" href="/css/output.css" type="text/css" />
 		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,12 +19,6 @@
 						<h1 id="name" class="text-2xl text-white letter-spacing-02">
 							DANIELA MILTIYADEVA
 						</h1>
-						<span class="socialico-plus">m</span>
-						<span class="socialico-plus">v</span>
-						<span class="socialico">f</span>
-						<span class="socialico-plus">i</span>
-						<span class="socialico">i</span>
-						<span class="socialico">e</span>
 					</div>
 					<div id="nav-bar" class="tracking-widest text-white text-xl">
 						<button id="home-nav" href="#home">HOME</button>
@@ -35,10 +29,10 @@
 						|
 						<button id="graphic-design-nav" class="relative capitalize graphic-design" href="#graphic-design">
 							GRAPHIC DESIGN <i class="fa fa-angle-down" style="font-size: 24px"></i>
-							<span id="logo-nav" class="graph-nav el logo-el">logo</span>
-							<span id="brand-nav" class="graph-nav el brand">brand identity</span>
-							<span id="ill-nav" class="graph-nav el ill">illustrations</span>
-							<span id="other-nav" class="graph-nav el other">other</span>
+							<span id="logo-nav" class="graph-nav el logo-el no-pointer">logo</span>
+							<span id="brand-nav" class="graph-nav el brand no-pointer ">brand identity</span>
+							<span id="ill-nav" class="graph-nav el ill no-pointer ">illustrations</span>
+							<span id="other-nav" class="graph-nav el other-el no-pointer ">other</span>
 						</button>
 					</div>
 				</div>
@@ -255,6 +249,49 @@
 		</div>
 	</div>
 
+	<div class="h-full relative">
+		<div id="other" class="other grid grid-flow-col h-full">
+			<div class="h-full other-title ml-36">
+				<h1 class="text-white uppercase letter-spacing-02">
+					<p class="grid grid-rows-2">
+						<span><b>other</b></span>
+					</p>
+				</h1>
+			</div>
+			<div class="h-full horizontal-scroll-other grid-cols-15">
+				<div class="other-desc">
+							<p>
+								There are so many aspects of Graphic Design - this portfolio would be so long if I included them all. But here is a little something more - posters, social media and typography.
+							</p>
+				</div>
+				<img src="/assets/brand-1.png" alt="" class="gallery-images">
+				<img src="/assets/brand-2.png" alt="" class="gallery-images">
+				<img src="/assets/brand-3.png" alt="" class="gallery-images">
+				<img src="/assets/brand-4.png" alt="" class="gallery-images">
+				<img src="/assets/brand-5.png" alt="" class="gallery-images">
+				<img src="/assets/brand-6.png" alt="" class="gallery-images">
+				<img src="/assets/brand-7.png" style="margin-right: 12em;" alt="" class="gallery-images">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="h-40 flex flex-row items-center content-center justify-between text-white" style="color: white">
+		<div class="capitalize letter-spacing-02 dm" style="margin-left:60px">
+			DANIELA MILTIYADEVA
+		</div>
+		<div style="margin-left: -12.5%; margin-top: -1%
+		">
+			<span class="socialico-plus"><a>m</a></span>
+			<span class="socialico-plus"><a href="">v</a></span>
+			<span class="socialico"><a href="https://www.facebook.com/ddmiltiyadeva">f</a></span>
+			<span class="socialico-plus"><a href="https://www.instagram.com/ddmiltiyadeva/">i</a></span>
+			<span class="socialico"><a href="https://www.linkedin.com/in/ddmiltiyadeva/">i</a></span>
+		</div>
+		<div class="footer-logo" style="margin-right: 60px;">
+			DM
+		</div>
+	</div>
 
 	<div id="project-dm-modal" class="modal">
 
