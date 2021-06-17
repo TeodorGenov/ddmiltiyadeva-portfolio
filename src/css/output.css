@@ -32306,6 +32306,32 @@ button {
   display: none;
 }
 
+.horizontal-scroll-illu::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll-other::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-hover {
+  filter: grayscale(0) blur(0);
+  transition: 0.3s ease-in-out;
+}
+
+.modal-hover:hover {
+  filter: grayscale(100%) blur(3px);
+}
+
+.modal-hover:hover::before {
+  content: "Press me";
+  display: block;
+  margin: 42px auto 24px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
 .gallery-images {
   height: 66%;
   width: auto;
