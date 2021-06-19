@@ -139,6 +139,10 @@ horizontalDiv.onwheel = (event) => {
 		scrollAmount += 10;
 		if (horizontalDiv.scrollLeft === 0) {
 			photographyTitleDiv.classList.remove("photography-slide");
+		} else {
+			if (!photographyTitleDiv.classList.contains("photography-slide")) {
+				photographyTitleDiv.classList.add("photography-slide");
+			}
 		}
 		if (scrollAmount >= 100) {
 			window.clearInterval(slideTimer);
@@ -356,11 +360,14 @@ var modalProjectDM = document.getElementById("project-dm-modal");
 var modalProject5in1 = document.getElementById("project-5in1-modal");
 var modalProjectFond = document.getElementById("project-fond-modal");
 var modalProjectBuro = document.getElementById("project-buro-modal");
+var modalVanHulten = document.getElementById("van-hulten-modal");
 
 var projectDMClick = document.getElementById("project-dm-click");
 var project5in1Click = document.getElementById("project-5in1-click");
 var projectFondClick = document.getElementById("project-fond-click");
 var projectBuroClick = document.getElementById("project-buro-click");
+var vanHultenClick = document.getElementById("van-hulten-click");
+
 projectDMClick.onclick = () => {
 	modalProjectDM.style.display = "block";
 };
@@ -376,11 +383,17 @@ projectFondClick.onclick = () => {
 projectBuroClick.onclick = () => {
 	modalProjectBuro.style.display = "block";
 };
+
+vanHultenClick.onclick = () => {
+	modalVanHulten.style.display = "block";
+};
 console.log(document.getElementsByClassName("close"));
 var closeDMModal = document.getElementsByClassName("close")[0];
 var close5in1Modal = document.getElementsByClassName("close")[1];
 var closeFondModal = document.getElementsByClassName("close")[2];
 var closeBuroCoModal = document.getElementsByClassName("close")[3];
+var closeVanHultenModal = document.getElementsByClassName("close")[4];
+
 // var closeBoschModal = document.getElementsByClassName("close")[4];
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = (event) => {
@@ -392,6 +405,8 @@ window.onclick = (event) => {
 		modalProjectFond.style.display = "none";
 	} else if (event.target == modalProjectBuro) {
 		modalProjectBuro.style.display = "none";
+	} else if (event.target == modalVanHulten) {
+		modalVanHulten.style.display = "none";
 	}
 };
 
@@ -404,11 +419,9 @@ close5in1Modal.onclick = () => {
 closeFondModal.onclick = () => {
 	modalProjectFond.style.display = "none";
 };
-
 closeBuroCoModal.onclick = () => {
 	modalProjectBuro.style.display = "none";
 };
-// closeBoschModal.onclick = (event) => {
-// 	console.log(event.target);
-// 	modalProjectDM.style.display = "none";
-// };
+closeVanHultenModal.onclick = () => {
+	modalVanHulten.style.display = "none";
+};

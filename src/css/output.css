@@ -31952,7 +31952,7 @@ a {
   justify-content: end;
   font-size: 7vw;
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 36.5%;
   /* left: 32.5%; */
   transform: translate(-25%, -35%);
@@ -32091,6 +32091,13 @@ button {
   /* grid-template-columns: 50% auto; */
 }
 
+.photography-2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* grid-template-columns: 50% auto; */
+}
+
 .logo-design {
   position: absolute;
   height: 100%;
@@ -32105,7 +32112,6 @@ button {
 }
 
 .photography-slide {
-  font-size: 3em !important;
   margin-right: 100px !important;
 }
 
@@ -32125,7 +32131,7 @@ button {
   margin-right: 100px !important;
 }
 
-#photography {
+#photography-2 {
   background-image: url("../assets/photography-title.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -32139,11 +32145,19 @@ button {
   background-size: contain;
 }
 
-.photography-title {
+.photography-title-2 {
   font-size: 5em;
   display: flex;
   align-items: center;
   margin-right: 31.45em;
+  transition: margin-right 500ms, font-size 700ms;
+}
+
+.photography-title {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  margin-right: 11.45em;
   transition: margin-right 500ms, font-size 700ms;
 }
 
@@ -32380,6 +32394,7 @@ button {
   color: #4d4d4d;
   font-size: 36px;
   margin: 12px;
+  margin-right: 18px;
 }
 
 .close i:hover {
@@ -32440,6 +32455,88 @@ button {
 .modal-content-div-right p {
   font-size: 20px;
   margin-top: 60px;
+}
+
+.email-number-speech-bubble {
+  top: -15%;
+  background-color: white;
+  left: -11%;
+  color: black;
+  padding: 8px;
+  border-radius: 18px;
+}
+
+.email:hover ~ .email-number-speech-bubble {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceInUp {
+  0%,
+	60%,
+	75%,
+	90%,
+	100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+  0%,
+	60%,
+	75%,
+	90%,
+	100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (min-width: 640px) {
