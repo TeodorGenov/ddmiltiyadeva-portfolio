@@ -32359,7 +32359,7 @@ button {
   transform: translateX(-52%);
   transition: opacity 0.5s, bottom 0.5s;
   color: black;
-  font-size: 1.5vw;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -32369,7 +32369,7 @@ button {
 
 .modal-hover:hover div {
   opacity: 1;
-  bottom: 20%;
+  bottom: 19%;
 }
 
 .modal-hover:hover img {
@@ -32388,7 +32388,7 @@ button {
   transform: translateX(-52%);
   transition: opacity 0.5s, bottom 0.5s;
   color: black;
-  font-size: 1.5vw;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -32417,7 +32417,7 @@ button {
   transform: translateX(-52%);
   transition: opacity 0.5s, bottom 0.5s;
   color: black;
-  font-size: 1.5vw;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -32427,7 +32427,7 @@ button {
 
 .modal-hover-fond:hover div {
   opacity: 1;
-  bottom: 12%;
+  bottom: 10%;
 }
 
 .modal-hover-fond:hover img {
@@ -32446,7 +32446,7 @@ button {
   transform: translateX(-52%);
   transition: opacity 0.5s, bottom 0.5s;
   color: black;
-  font-size: 1.5vw;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -32475,7 +32475,7 @@ button {
   transform: translateX(-52%);
   transition: opacity 0.5s, bottom 0.5s;
   color: black;
-  font-size: 1.5vw;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -32485,7 +32485,7 @@ button {
 
 .modal-hover-buro:hover div {
   opacity: 1;
-  bottom: 20%;
+  bottom: 18%;
 }
 
 .modal-hover-buro:hover img {
