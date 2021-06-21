@@ -78,31 +78,33 @@ for (
 
 graphicDesignButton.addEventListener("click", () => {
 	if (!clicked) {
-		// for (
-		// 	var i = 0;
-		// 	i <= document.getElementsByClassName("no-pointer").length - 1;
-		// 	i++
-		// ) {
-		// 	document.getElementsByClassName("el")[i].classList.remove("no-pointer");
-		// }
-
-		anime({
-			targets: ".nav-bar",
-			height: "300px",
-		});
-		anime({
-			targets: ".graphic-design .el",
-			translateY: anime.stagger(40, { start: 40 }),
-			opacity: 1,
-			delay: anime.stagger(100, { start: 100 }),
-		});
-		clicked = true;
+		for (
+			var i = 0;
+			i <= document.getElementsByClassName("no-pointer").length + 2;
+			i++
+		) {
+			document.getElementsByClassName("el")[i].classList.remove("no-pointer");
+		}
+		setTimeout(() => {
+			anime({
+				targets: ".nav-bar",
+				height: "300px",
+			});
+			anime({
+				targets: ".graphic-design .el",
+				translateY: anime.stagger(40, { start: 40 }),
+				opacity: 1,
+				delay: anime.stagger(100, { start: 100 }),
+			});
+			clicked = true;
+		}, 500);
 	} else {
 		for (
 			var i = 0;
-			i <= document.getElementsByClassName("no-pointer").length - 1;
+			i <= document.getElementsByClassName("el").length - 1;
 			i++
 		) {
+			console.log(document.getElementsByClassName("el")[i]);
 			document.getElementsByClassName("el")[i].classList.add("no-pointer");
 		}
 		hide();

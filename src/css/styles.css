@@ -74,7 +74,7 @@ a {
 .nav-bar {
 	mix-blend-mode: difference;
 	clip: rect(auto, auto, auto, auto);
-	height: 300px;
+	height: 150px;
 }
 
 #graphic-design-nav span {
@@ -87,6 +87,10 @@ a {
 #nav-bar button:focus {
 	outline: none;
 	font-weight: 500;
+}
+
+.no-pointer {
+	pointer-events: none;
 }
 
 .sticky-nav-bar {
