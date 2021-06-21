@@ -1,10 +1,6 @@
 import anime from "https://unpkg.com/animejs@3.2.1/lib/anime.es.js";
 // var anime = require("animejs/lib/anime.es.js");
 var textWrapper = document.querySelector(".portfolio");
-textWrapper.innerHTML = textWrapper.textContent.replace(
-	/\S/g,
-	"<span class='letter'>$&</span>"
-);
 
 const homeNav = document.getElementById("home-nav");
 homeNav.addEventListener("click", () => {
@@ -39,7 +35,11 @@ otherNav.addEventListener("click", () => {
 	document.getElementById("other").scrollIntoView({ behavior: "smooth" });
 });
 
-console.log(document.getElementsByClassName("no-pointer"));
+textWrapper.innerHTML = textWrapper.textContent.replace(
+	/\S/g,
+	"<span class='letter'>$&</span>"
+);
+
 anime.timeline({ loop: false }).add({
 	targets: ".portfolio .letter",
 	translateX: [40, 0],
@@ -74,9 +74,7 @@ for (
 	var i = 0;
 	i <= document.getElementsByClassName("no-pointer").length - 1;
 	i++
-) {
-	console.log(document.getElementsByClassName("el")[i]);
-}
+) {}
 
 graphicDesignButton.addEventListener("click", () => {
 	if (!clicked) {
@@ -85,7 +83,6 @@ graphicDesignButton.addEventListener("click", () => {
 		// 	i <= document.getElementsByClassName("no-pointer").length - 1;
 		// 	i++
 		// ) {
-		// 	console.log(document.getElementsByClassName("el")[i]);
 		// 	document.getElementsByClassName("el")[i].classList.remove("no-pointer");
 		// }
 
@@ -159,7 +156,6 @@ horizontalDivLogo.onwheel = (event) => {
 	var scrollAmount = 0;
 	event.preventDefault();
 
-	console.log(horizontalDivLogo.scrollLeft);
 	// horizontalDiv.scrollLeft += event.deltaY;
 	var slideTimer = setInterval(function () {
 		horizontalDivLogo.scrollLeft += event.deltaY / 10;
@@ -214,7 +210,6 @@ const illustrationTitleDiv = document.querySelector(".illustrations-title");
 horizontalDivIllu.onwheel = (event) => {
 	var scrollAmount = 0;
 	event.preventDefault();
-	console.log(horizontalDivIllu.scrollLeft);
 	// horizontalDiv.scrollLeft += event.deltaY;
 	var slideTimer = setInterval(function () {
 		horizontalDivIllu.scrollLeft += event.deltaY / 10;
@@ -240,7 +235,6 @@ const otherTitleDiv = document.querySelector(".other-title");
 horizontalDivOther.onwheel = (event) => {
 	var scrollAmount = 0;
 	event.preventDefault();
-	console.log(horizontalDivOther.scrollLeft);
 	// horizontalDiv.scrollLeft += event.deltaY;
 	var slideTimer = setInterval(function () {
 		horizontalDivOther.scrollLeft += event.deltaY / 10;
@@ -262,40 +256,48 @@ horizontalDivOther.onwheel = (event) => {
 
 const body = document.getElementsByTagName("BODY")[0];
 
+const aboutMe = document.getElementsByClassName("background-img-about-me-2")[0];
+const aboutMeDesc = document.getElementsByClassName("about-me-desc")[0];
+const aboutMeName = document.getElementsByClassName("about-me-name")[0];
+
+anime.timeline({ loop: false }).add({
+	targets: ".about-me-name .lttr",
+	translateX: [40, 0],
+	translateZ: 0,
+	pointerEvent: "auto",
+	opacity: [0, 1],
+	easing: "easeOutExpo",
+	duration: 2000,
+	delay: (el, i) => 500 + 30 * i,
+});
+
 body.addEventListener(
 	"scroll",
 	() => {
-		console.log(logoTitleDiv.getBoundingClientRect().y);
-
 		if (
 			photographyTitleDiv.getBoundingClientRect().y < -700 ||
 			photographyTitleDiv.getBoundingClientRect().y > 700
 		) {
-			console.log("working-photo");
 			photographyTitleDiv.classList.remove("photography-slide");
 			if (
 				logoTitleDiv.getBoundingClientRect().y < -450 ||
 				logoTitleDiv.getBoundingClientRect().y > 450
 			) {
-				console.log("working-logo");
 				logoTitleDiv.classList.remove("logo-slide");
 				if (
 					brandTitleDiv.getBoundingClientRect().y < -450 ||
 					brandTitleDiv.getBoundingClientRect().y > 450
 				) {
-					console.log("working-slide");
 					brandTitleDiv.classList.remove("brand-slide");
 					if (
 						illustrationTitleDiv.getBoundingClientRect().y < -450 ||
 						illustrationTitleDiv.getBoundingClientRect().y > 450
 					) {
-						console.log("working-illu");
 						illustrationTitleDiv.classList.remove("illustrations-slide");
 						if (
 							otherTitleDiv.getBoundingClientRect().y < -450 ||
 							otherTitleDiv.getBoundingClientRect().y > 450
 						) {
-							console.log("working-illu");
 							otherTitleDiv.classList.remove("illustrations-slide");
 						}
 					}
@@ -313,7 +315,6 @@ body.addEventListener(
 		};
 
 		logoTitleDiv.onwheel = (event) => {
-			console.log(event.deltaY);
 			if (event.deltaY > 0) {
 				if (!logoTitleDiv.classList.contains("logo-slide")) {
 					event.preventDefault();
@@ -363,6 +364,9 @@ var modalProjectBuro = document.getElementById("project-buro-modal");
 var modalVanHulten = document.getElementById("van-hulten-modal");
 
 var projectDMClick = document.getElementById("project-dm-click");
+
+var mouseFollow = document.getElementById("mouse-follow");
+
 var project5in1Click = document.getElementById("project-5in1-click");
 var projectFondClick = document.getElementById("project-fond-click");
 var projectBuroClick = document.getElementById("project-buro-click");
@@ -387,7 +391,6 @@ projectBuroClick.onclick = () => {
 vanHultenClick.onclick = () => {
 	modalVanHulten.style.display = "block";
 };
-console.log(document.getElementsByClassName("close"));
 var closeDMModal = document.getElementsByClassName("close")[0];
 var close5in1Modal = document.getElementsByClassName("close")[1];
 var closeFondModal = document.getElementsByClassName("close")[2];

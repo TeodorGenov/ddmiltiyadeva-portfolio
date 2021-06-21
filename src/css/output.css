@@ -31900,6 +31900,12 @@ a {
   color: white;
 }
 
+.static {
+  position: fixed;
+  inset: 0px;
+  z-index: -99;
+}
+
 .nav-bar {
   mix-blend-mode: difference;
   clip: rect(auto, auto, auto, auto);
@@ -32050,6 +32056,7 @@ button {
   flex-direction: column;
   margin-left: 400px;
   font-size: 2em;
+  transition: margin 0.5s;
 }
 
 .about-me-welcome {
@@ -32329,21 +32336,61 @@ button {
 }
 
 .modal-hover {
-  filter: grayscale(0) blur(0);
-  transition: 0.3s ease-in-out;
-}
-
-.modal-hover:hover {
-  filter: grayscale(100%) blur(3px);
-}
-
-.modal-hover:hover::before {
-  content: "Press me";
-  display: block;
-  margin: 42px auto 24px;
   position: relative;
-  text-align: center;
-  width: 100%;
+}
+
+.modal-hover div {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-52%);
+  transition: opacity 0.5s, bottom 0.5s;
+  color: white;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+.modal-hover img {
+  transition: filter 0.5s;
+}
+
+.modal-hover:hover div {
+  opacity: 1;
+  bottom: 43%;
+}
+
+.modal-hover:hover img {
+  filter: brightness(0.2);
+}
+
+.modal-hover-hulten {
+  position: relative;
+}
+
+.modal-hover-hulten div {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-52%);
+  transition: opacity 0.5s, bottom 0.5s;
+  color: white;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+.modal-hover-hulten img {
+  transition: filter 0.5s;
+}
+
+.modal-hover-hulten:hover div {
+  opacity: 1;
+  bottom: 25%;
+}
+
+.modal-hover-hulten:hover img {
+  filter: brightness(0.2);
 }
 
 .gallery-images {
@@ -32466,77 +32513,32 @@ button {
   border-radius: 18px;
 }
 
-.email:hover ~ .email-number-speech-bubble {
-  -webkit-animation-name: bounceInUp;
-  animation-name: bounceInUp;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.clickable {
+  cursor: pointer;
 }
 
-@-webkit-keyframes bounceInUp {
-  0%,
-	60%,
-	75%,
-	90%,
-	100% {
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
+.clickable:hover {
+  -webkit-animation: test 2s infinite;
+          animation: test 2s infinite;
+}
 
+@-webkit-keyframes test {
   0% {
-    opacity: 0;
-    transform: translate3d(0, 3000px, 0);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(0, -20px, 0);
-  }
-
-  75% {
-    transform: translate3d(0, 10px, 0);
-  }
-
-  90% {
-    transform: translate3d(0, -5px, 0);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
   }
 }
 
-@keyframes bounceInUp {
-  0%,
-	60%,
-	75%,
-	90%,
-	100% {
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
+@keyframes test {
   0% {
-    opacity: 0;
-    transform: translate3d(0, 3000px, 0);
   }
+}
 
-  60% {
-    opacity: 1;
-    transform: translate3d(0, -20px, 0);
-  }
-
-  75% {
-    transform: translate3d(0, 10px, 0);
-  }
-
-  90% {
-    transform: translate3d(0, -5px, 0);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+#mouse-follow {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  padding: 25px;
+  background-color: red;
 }
 
 @media (min-width: 640px) {
