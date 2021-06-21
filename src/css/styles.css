@@ -76,7 +76,13 @@ a {
 	clip: rect(auto, auto, auto, auto);
 	height: 150px;
 }
+#name {
+	font-size: 1.2vw;
+}
 
+#nav-bar {
+	font-size: 1vw;
+}
 #graphic-design-nav span {
 	position: absolute;
 	opacity: 0;
@@ -102,7 +108,7 @@ a {
 	font-family: Elowen;
 	text-align: center;
 	justify-content: end;
-	font-size: 40rem;
+	font-size: 34vw;
 	color: #4d4d4d;
 	position: absolute;
 	top: 52%;
@@ -165,8 +171,8 @@ button {
 
 .about-me {
 	font-family: "Montserrat";
-	font-weight: 800;
 	color: white;
+	font-size: 2.3vw;
 }
 
 .flipped {
@@ -213,8 +219,9 @@ button {
 	justify-content: flex-end;
 	align-content: start;
 	flex-direction: column;
-	font-size: 3em;
+	font-size: 1.7vw;
 	line-height: 1.15em;
+	margin-left: -50%;
 }
 
 .about-me-desc {
@@ -222,9 +229,8 @@ button {
 	justify-content: center;
 	align-content: end;
 	flex-direction: column;
-	margin-left: 400px;
-	font-size: 2em;
-	transition: margin 0.5s;
+	margin-left: 90%;
+	font-size: 1.7vw;
 }
 
 .about-me-welcome {
@@ -232,7 +238,7 @@ button {
 	justify-content: center;
 	align-content: start;
 	flex-direction: column;
-	font-size: 1.2em;
+	font-size: 1vw;
 }
 
 .highlight b {
@@ -244,7 +250,7 @@ button {
 	transition: all 500ms ease-in-out;
 }
 
-.highlight:hover b {
+.highlighter b {
 	background-size: 100% 100%;
 	color: white;
 }
@@ -254,8 +260,8 @@ button {
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 200px;
-	width: 200px;
+	height: 10vw;
+	width: 10vw;
 	margin-top: -16px;
 }
 
@@ -329,7 +335,7 @@ button {
 }
 
 .photography-title {
-	font-size: 3em;
+	font-size: 2.67vw;
 	display: flex;
 	align-items: center;
 	margin-right: 11.45em;
@@ -337,7 +343,7 @@ button {
 }
 
 .logo-title {
-	font-size: 3em;
+	font-size: 2.67vw;
 	display: flex;
 	align-items: center;
 	margin-right: 13.15em;
@@ -345,7 +351,7 @@ button {
 }
 
 .brand-title {
-	font-size: 3em;
+	font-size: 2.67vw;
 	display: flex;
 	align-items: center;
 	margin-right: 10.68em;
@@ -353,18 +359,18 @@ button {
 }
 
 .illustrations-title {
-	font-size: 3em;
+	font-size: 2.67vw;
 	display: flex;
 	align-items: center;
-	margin-right: 11.03em;
+	margin-right: 11.02em;
 	transition: margin-right 500ms;
 }
 
 .other-title {
-	font-size: 3em;
+	font-size: 2.67vw;
 	display: flex;
 	align-items: center;
-	margin-right: 12.38em;
+	margin-right: 12.36em;
 	transition: margin-right 500ms;
 }
 
@@ -376,8 +382,8 @@ button {
 	display: flex;
 	flex-direction: column;
 	min-width: 35vw;
-	padding: 0 6em 0 6em;
-	font-size: 0.8vw;
+	margin: 12%;
+	font-size: 1vw;
 }
 
 .photography-desc {
@@ -388,8 +394,8 @@ button {
 	display: flex;
 	flex-direction: column;
 	min-width: 35vw;
-	padding: 0 6em 0 6em;
-	font-size: 0.8vw;
+	margin: 12%;
+	font-size: 1vw;
 }
 
 .logo-desc {
@@ -400,8 +406,8 @@ button {
 	display: flex;
 	flex-direction: column;
 	min-width: 35vw;
-	padding: 0 6em 0 6em;
-	font-size: 0.8vw;
+	margin: 12%;
+	font-size: 1vw;
 }
 
 .brand-desc {
@@ -412,8 +418,8 @@ button {
 	display: flex;
 	flex-direction: column;
 	min-width: 35vw;
-	padding: 0 6em 0 6em;
-	font-size: 0.8vw;
+	margin: 12%;
+	font-size: 1vw;
 }
 
 .other-desc {
@@ -424,8 +430,8 @@ button {
 	display: flex;
 	flex-direction: column;
 	min-width: 35vw;
-	padding: 0 6em 0 6em;
-	font-size: 0.8vw;
+	margin: 12%;
+	font-size: 1vw;
 }
 
 .horizontal-scroll {
@@ -511,8 +517,8 @@ button {
 	left: 50%;
 	transform: translateX(-52%);
 	transition: opacity 0.5s, bottom 0.5s;
-	color: white;
-	font-size: 5vw;
+	color: black;
+	font-size: 2vw;
 	font-weight: 600;
 }
 
@@ -522,10 +528,66 @@ button {
 
 .modal-hover:hover div {
 	opacity: 1;
-	bottom: 43%;
+	bottom: 20%;
 }
 
 .modal-hover:hover img {
+	filter: brightness(0.2);
+}
+
+.modal-hover-5in1 {
+	position: relative;
+}
+.modal-hover-5in1 div {
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-52%);
+	transition: opacity 0.5s, bottom 0.5s;
+	color: black;
+	font-size: 2vw;
+	font-weight: 600;
+}
+
+.modal-hover-5in1 img {
+	transition: filter 0.5s;
+}
+
+.modal-hover-5in1:hover div {
+	opacity: 1;
+	bottom: 5%;
+}
+
+.modal-hover-5in1:hover img {
+	filter: brightness(0.2);
+}
+
+.modal-hover-fond {
+	position: relative;
+}
+.modal-hover-fond div {
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-52%);
+	transition: opacity 0.5s, bottom 0.5s;
+	color: black;
+	font-size: 2vw;
+	font-weight: 600;
+}
+
+.modal-hover-fond img {
+	transition: filter 0.5s;
+}
+
+.modal-hover-fond:hover div {
+	opacity: 1;
+	bottom: 12%;
+}
+
+.modal-hover-fond:hover img {
 	filter: brightness(0.2);
 }
 
@@ -539,8 +601,8 @@ button {
 	left: 50%;
 	transform: translateX(-52%);
 	transition: opacity 0.5s, bottom 0.5s;
-	color: white;
-	font-size: 5vw;
+	color: black;
+	font-size: 2vw;
 	font-weight: 600;
 }
 
@@ -550,12 +612,41 @@ button {
 
 .modal-hover-hulten:hover div {
 	opacity: 1;
-	bottom: 25%;
+	bottom: 12%;
 }
 
 .modal-hover-hulten:hover img {
 	filter: brightness(0.2);
 }
+
+.modal-hover-buro {
+	position: relative;
+}
+.modal-hover-buro div {
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-52%);
+	transition: opacity 0.5s, bottom 0.5s;
+	color: black;
+	font-size: 2vw;
+	font-weight: 600;
+}
+
+.modal-hover-buro img {
+	transition: filter 0.5s;
+}
+
+.modal-hover-buro:hover div {
+	opacity: 1;
+	bottom: 20%;
+}
+
+.modal-hover-buro:hover img {
+	filter: brightness(0.2);
+}
+
 .gallery-images {
 	height: 66%;
 	width: auto;
@@ -584,6 +675,7 @@ button {
 	background-color: #e6e6e6;
 	margin: 5.4% auto; /* 15% from the top and centered */
 	width: 80%; /* Could be more or less, depending on screen size */
+	height: 80%;
 }
 
 .modal-header {
@@ -601,7 +693,7 @@ button {
 
 .close i {
 	color: #4d4d4d;
-	font-size: 36px;
+	font-size: 2vw;
 	margin: 12px;
 	margin-right: 18px;
 }
@@ -624,28 +716,28 @@ button {
 }
 
 .modal-title {
-	font-size: 30px;
+	font-size: 1.8vw;
 	font-weight: 600;
 }
 
 .modal-subtitle {
-	font-size: 24px;
+	font-size: 1.5vw;
 	font-weight: normal;
 }
 
 .modal-content {
-	padding: 32px 80px 48px 80px;
+	padding: 32px 6% 48px 6%;
 	height: 730px;
 }
 
 .modal-content-div-left img {
 	margin-top: 24px;
-	height: 80%;
+	/* height: 80%; */
 }
 
 .project5in1-img {
 	max-width: 100%;
-	width: 50%;
+	width: 45%;
 }
 .fondaciya-img {
 	max-width: 100%;
@@ -654,12 +746,12 @@ button {
 
 .img-title {
 	color: #4d4d4d;
-	font-size: 28px;
+	font-size: 1.5vw;
 	font-weight: normal;
 }
 
 .modal-content-div-right p {
-	font-size: 20px;
+	font-size: 1.2vw;
 	margin-top: 60px;
 }
 

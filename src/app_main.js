@@ -88,11 +88,11 @@ graphicDesignButton.addEventListener("click", () => {
 		setTimeout(() => {
 			anime({
 				targets: ".nav-bar",
-				height: "300px",
+				height: "350px",
 			});
 			anime({
 				targets: ".graphic-design .el",
-				translateY: anime.stagger(40, { start: 40 }),
+				translateY: anime.stagger(45, { start: 40 }),
 				opacity: 1,
 				delay: anime.stagger(100, { start: 100 }),
 			});
@@ -313,6 +313,8 @@ body.addEventListener(
 					event.preventDefault();
 				}
 				photographyTitleDiv.classList.add("photography-slide");
+			} else if (event.deltaY < 0) {
+				photographyTitleDiv.classList.remove("photography-slide");
 			}
 		};
 
@@ -430,3 +432,12 @@ closeBuroCoModal.onclick = () => {
 closeVanHultenModal.onclick = () => {
 	modalVanHulten.style.display = "none";
 };
+
+const aboutMeText = document.getElementById("about-me-text");
+const highlightedP = document.getElementsByClassName("highlight")[0];
+body.addEventListener("scroll", () => {
+	console.log(aboutMeText.getBoundingClientRect().y);
+	if (aboutMeText.getBoundingClientRect().y <= 350) {
+		highlightedP.classList.add("highlighter");
+	}
+});
